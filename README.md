@@ -1,4 +1,4 @@
-# Sourdough Monitor 🍞
+# Sourdough Starter Monitor 🍞
 
 This fun project was created during [Grafana](https://www.grafana.com) hack days and inspired by [sourd.io](https://www.sourd.io/).
 
@@ -22,8 +22,6 @@ Used Arduino Libraries:
 - NTP Client by Fabrice Weinberg
 - HCSR04 by Martin Sosic
 
-![Sensors](imgs/sensors.png)
-
 To store the data I have used locally run [InfluxDB](https://www.influxdata.com/). And for visualisation I've used Grafana.
 
-![Monitored sourdougn](imgs/grafana.png)
+![Monitored sourdougn](imgs/grafana.jpg)
