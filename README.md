@@ -2,7 +2,6 @@
 
 This fun project was created during [Grafana](https://www.grafana.com) hack days and inspired by [sourd.io](https://www.sourd.io/).
 
-![Monitor](imgs/monitor2.jpg)
 ![Monitor](imgs/monitor.jpg)
 
 To re-create this monitoring solution for your sourdough starter, you will need:
