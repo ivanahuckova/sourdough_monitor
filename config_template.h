@@ -20,7 +20,7 @@
 // How to get the Root CA cert:
 // https://techtutorialsx.com/2017/11/18/esp32-arduino-https-get-request/
 
-#define HM_ROOT_CA "-----BEGIN CERTIFICATE-----" \
+#define ROOT_CA "-----BEGIN CERTIFICATE-----" \
 "exampleexampleexampleexampleexampleexampleexampleexampleexamplee" \
 "exampleexampleexampleexampleexampleexampleexampleexampleexamplee" \
 "exampleexampleexampleexampleexampleexampleexampleexampleexamplee" \
