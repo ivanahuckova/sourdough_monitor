@@ -43,7 +43,7 @@ void setupWiFi() {
 
 // Function to submit metrics to locally run Influx
 void submitHostedInflux(unsigned long ts, float cels, float hum, float hic, long dist) {
-
+  
   // Build body
   String body = String("temperature value=") + cels + " " + ts + "\n" +
     "humidity value=" + hum + " " + ts + "\n" +
@@ -51,15 +51,15 @@ void submitHostedInflux(unsigned long ts, float cels, float hum, float hic, long
     "distance value=" + dist + " " + ts;
 
   // Submit POST request via HTTP
-  httpInfllux.begin(String("http://") + INFLUX_HOST + ":" + INFLUX_PORT + "/api/v2/write?bucket=" + INFLUX_DB + "&precision=s");
+  httpInflux.begin(String("https://") + INFLUX_HOST + "/api/v2/write?org=" + INFLUX_ORG_ID + "&bucket=" + INFLUX_DB + "&precision=s", HM_ROOT_CA);
+  httpInflux.addHeader("Authorization", INFLUX_TOKEN);
 
   int httpCode = httpInflux.POST(body);
   if (httpCode > 0) {
-    Serial.printf("Influx [HTTP] POST...  Code: %d  Response: ", httpCode);
-    httpInflux.writeToStream(&Serial);
-    Serial.println();
+    Serial.printf("Influx [HTTPS] POST...  Code: %d  Response: ", httpCode);
+   Serial.println();
   } else {
-    Serial.printf("Influx [HTTP] POST... Error: %s\n", httpInflux.errorToString(httpCode).c_str());
+    Serial.printf("Influx [HTTPS] POST... Error: %s\n", httpInflux.errorToString(httpCode).c_str());
   }
 
   httpInflux.end();
@@ -121,7 +121,8 @@ void loop() {
 
   yield();
   submitHostedInflux(ts, cels, hum, hic, dist);
+  
 
-  // wait 30s, then do it again
-  delay(30 * 1000);
+  // wait 60s, then do it again
+  delay(60 * 1000);
 }
