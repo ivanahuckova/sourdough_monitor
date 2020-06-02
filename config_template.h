@@ -14,7 +14,7 @@
 #define INFLUX_HOST "your_influx_host" // Influx host (e.g. eu-central-1-1.aws.cloud2.influxdata.com)
 #define INFLUX_ORG_ID "your_influx_org_id" // Org id
 #define INFLUX_TOKEN "Token your_token" // Influx token
-#define INFLUX_DB "your_sourdough_database" // Influx database that we set up for this host
+#define INFLUX_BUCKET "your_sourdough_bucket" // Influx bucket that we set up for this host
 
 
 // How to get the Root CA cert:

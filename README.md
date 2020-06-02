@@ -6,12 +6,14 @@ This fun project was created during [Grafana](https://www.grafana.com) hack days
 
 To re-create this monitoring solution for your sourdough starter, you will need:
 
-- **DHT11** sensor to meassure temperature and humidity
+- **DHT11** sensor to measure temperature and humidity
 - **HC-SR04** ultrasonic distance sensor
 - **ESP32-PICO-KIT V4** development board
 - **M-F Dupont Cabels**
 - **micro USB cable**
+- **USB charger**
 - **Jar** with the "cuttable" lid
+- **Glue**
 
 ![Set up](imgs/setup.png)
 

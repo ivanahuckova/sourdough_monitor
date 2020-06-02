@@ -51,7 +51,7 @@ void submitHostedInflux(unsigned long ts, float cels, float hum, float hic, long
     "distance value=" + dist + " " + ts;
 
   // Submit POST request via HTTP
-  httpInflux.begin(String("https://") + INFLUX_HOST + "/api/v2/write?org=" + INFLUX_ORG_ID + "&bucket=" + INFLUX_DB + "&precision=s", ROOT_CA);
+  httpInflux.begin(String("https://") + INFLUX_HOST + "/api/v2/write?org=" + INFLUX_ORG_ID + "&bucket=" + INFLUX_BUCKET + "&precision=s", ROOT_CA);
   httpInflux.addHeader("Authorization", INFLUX_TOKEN);
 
   int httpCode = httpInflux.POST(body);
