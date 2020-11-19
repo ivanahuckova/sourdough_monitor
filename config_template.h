@@ -16,6 +16,8 @@
 #define INFLUX_TOKEN "Token your_token" // Influx token
 #define INFLUX_BUCKET "your_sourdough_bucket" // Influx bucket that we set up for this host
 
+#define LOKI_USER "111" // Hosted Loki user
+#define LOKI_API_KEY "api_key" // Hosted Loki API key
 
 // How to get the Root CA cert:
 // https://techtutorialsx.com/2017/11/18/esp32-arduino-https-get-request/
